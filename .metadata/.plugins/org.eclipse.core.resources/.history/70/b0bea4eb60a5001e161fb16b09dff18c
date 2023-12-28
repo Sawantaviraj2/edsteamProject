@@ -1,0 +1,12 @@
+package com.edsteam.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.edsteam.service.ContactService;
+
+@RestController
+public class ContactController {
+
+	private ContactService cs;
+
+}

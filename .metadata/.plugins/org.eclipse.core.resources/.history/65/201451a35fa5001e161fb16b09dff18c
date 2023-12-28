@@ -1,0 +1,30 @@
+package com.edsteam.service;
+
+import java.util.List;
+
+import com.edsteam.entity.Contact;
+import com.edsteam.repository.ContactRepository;
+
+public class ContactServiceImpl implements ContactService {
+
+	private ContactRepository cr;
+
+	@Override
+	public Contact createContact(Contact contact) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Contact> getAllContact() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteContact(Integer contactId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

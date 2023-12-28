@@ -1,0 +1,30 @@
+package com.edsteam.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.edsteam.entity.Contact;
+import com.edsteam.service.ContactService;
+
+@RestController
+public class ContactController {
+
+	private ContactService cs;
+
+	@Autowired
+	public ContactController(ContactService cs) {
+		super();
+		this.cs = cs;
+	}
+
+	@PostMapping("contacts")
+	public ResponseEntity<Contact> createContact(@RequestBody Contact contact) {
+		Contact c = cs.createContact(contact);
+		return new ResponseEntity<Contact>(c, HttpStatus.CREATED);
+	}
+
+}
